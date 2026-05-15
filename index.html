@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Homeland Jobs | Find Your Next Opportunity</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- ============================================= -->
+    <!-- SECURITY: Block all code inspection methods    -->
+    <!-- WHY: Protects source code from unauthorized    -->
+    <!--       viewing as required by assessment        -->
+    <!-- ============================================= -->
+    <script>
+        // Block right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Block keyboard shortcuts for DevTools
+        document.addEventListener('keydown', function(e) {
+            // F12 - Developer Tools
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I (Inspect)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+C (Inspect Element)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Detect DevTools opening via time difference
+        let devToolsOpen = false;
+        const detectDevTools = function() {
+            const start = new Date().getTime();
+            debugger;
+            const end = new Date().getTime();
+            if (end - start > 100) {
+                if (!devToolsOpen) {
+                    devToolsOpen = true;
+                    document.body.innerHTML = '<div style="text-align:center;padding:50px;font-family:Arial;"><h1>🔒 Developer Tools Detected</h1><p>Please close DevTools to continue using Homeland Jobs.</p><p>This application is protected against code inspection.</p></div>';
+                }
+            }
+        };
+        setInterval(detectDevTools, 1000);
+        
+        // Disable console logging
+        console.log = function() {};
+        console.error = function() {};
+        console.warn = function() {};
+        console.table = function() {};
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="script.js"></script>
+</body>
+</html>
