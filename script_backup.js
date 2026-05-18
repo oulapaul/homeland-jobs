@@ -664,7 +664,7 @@ function render() {
             </main>
             <footer class="app-footer">
                 <address>📧 support@homelandjobs.co.ke | 📍 Nairobi, Kenya</address>
-                <div class="copyright"><p>&copy; 2026 Homeland Jobs. All rights reserved.</p></div>
+                <div class="copyright"><p>&copy; 2026 Homeland Jobs | Connected to Backend API on port 5000</p></div>
             </footer>
         </div>
     `;
